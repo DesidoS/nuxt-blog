@@ -16,7 +16,7 @@ module.exports = {
     ]
   },
 
-  loading: { color: '#fff' },
+  loading: { color: '#409EFF' },
 
   css: [
     'element-ui/lib/theme-chalk/index.css',
@@ -30,13 +30,11 @@ module.exports = {
   modules: [
     '@nuxtjs/axios'
   ],
-  
   axios: {},
 
   build: {
     transpile: [/^element-ui/],
     extend(config, ctx) {
-      
     }
   }
 }

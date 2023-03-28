@@ -13,6 +13,8 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  loading: { color: '#409EFF' },
+
   css: ['element-ui/lib/theme-chalk/index.css', '@/theme/index.scss'],
 
   plugins: ['@/plugins/globals'],
@@ -21,7 +23,7 @@ export default {
 
   buildModules: ['@nuxtjs/eslint-module'],
 
-  modules: [],
+  modules: ['@nuxtjs/axios'],
 
   build: {
     transpile: [/^element-ui/],
