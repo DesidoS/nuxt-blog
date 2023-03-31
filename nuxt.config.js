@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   head: {
     title: 'nuxt-blog',
     htmlAttrs: {

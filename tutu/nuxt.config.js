@@ -30,11 +30,13 @@ module.exports = {
   modules: [
     '@nuxtjs/axios'
   ],
+
   axios: {},
 
   build: {
     transpile: [/^element-ui/],
     extend(config, ctx) {
+
     }
   }
 }
