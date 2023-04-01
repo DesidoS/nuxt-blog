@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "devv": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -15,7 +14,7 @@
     "heroku-postbuild": "npm run build"
   },
   "engines": {
-    "node": "10.x"
+    "node": "18.x"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
