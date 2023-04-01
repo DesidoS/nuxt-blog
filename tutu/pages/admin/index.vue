@@ -18,12 +18,13 @@
 <script>
 import AppAnalyticsChart from '@/components/admin/AnalyticsChart'
 export default {
-  components: { AppAnalyticsChart },
   layout: 'admin',
   middleware: ['admin-auth'],
-  async asyncData({ store }) {
-    const { views, comments } = await store.dispatch('post/getAnalytics')
-    return { views, comments }
+  async asyncData({store}) {
+    const {views, comments} = await store.dispatch('post/getAnalytics')
+    return {views, comments}
   },
+  components: {AppAnalyticsChart}
 }
 </script>
+

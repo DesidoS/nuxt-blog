@@ -73,17 +73,17 @@ module.exports.getAnalytics = async (req, res) => {
   try {
     const posts = await Post.find()
 
-    const labels = posts.map((post) => post.title)
+    const labels = posts.map(post => post.title)
 
     const json = {
       comments: {
         labels,
-        data: posts.map((post) => post.comments.length),
+        data: posts.map(post => post.comments.length)
       },
       views: {
         labels,
-        data: posts.map((post) => post.views),
-      },
+        data: posts.map(post => post.views)
+      }
     }
 
     res.json(json)
