@@ -1,12 +1,9 @@
 <template>
-  <el-card
-    shadow="always"
-    :style="{width: '500px'}"
-  >
+  <el-card shadow="always" :style="{ width: '500px' }">
     <el-form
+      ref="form"
       :model="controls"
       :rules="rules"
-      ref="form"
       @submit.native.prevent="onSubmit"
     >
       <h2>Войти в панель администратора</h2>
@@ -22,12 +19,7 @@
       </div>
 
       <el-form-item>
-        <el-button
-          type="primary"
-          native-type="submit"
-          round
-          :loading="loading"
-        >
+        <el-button type="primary" native-type="submit" round :loading="loading">
           Войти
         </el-button>
       </el-form-item>
@@ -43,21 +35,23 @@ export default {
       loading: false,
       controls: {
         login: '',
-        password: ''
+        password: '',
       },
       rules: {
-        login: [
-          { required: true, message: 'Введите логин', trigger: 'blur' }
-        ],
+        login: [{ required: true, message: 'Введите логин', trigger: 'blur' }],
         password: [
           { required: true, message: 'Введите пароль', trigger: 'blur' },
-          { min: 6, message: 'Пароль должен быть не менее 6 символов', trigger: 'blur' }
-        ]
-      }
+          {
+            min: 6,
+            message: 'Пароль должен быть не менее 6 символов',
+            trigger: 'blur',
+          },
+        ],
+      },
     }
   },
   mounted() {
-    const {message} = this.$route.query
+    const { message } = this.$route.query
 
     switch (message) {
       case 'login':
@@ -66,29 +60,31 @@ export default {
       case 'logout':
         this.$message.success('Вы успешно вышли из системы')
         break
+      case 'session':
+        this.$message.warning('Время сессии истекло, пожалуйста зайдите заного')
+        break
     }
   },
   methods: {
     onSubmit() {
-      this.$refs.form.validate(async valid => {
+      this.$refs.form.validate(async (valid) => {
         if (valid) {
           this.loading = true
 
           try {
             const formData = {
               login: this.controls.login,
-              password: this.controls.password
+              password: this.controls.password,
             }
 
             await this.$store.dispatch('auth/login', formData)
             this.$router.push('/admin')
-
           } catch (e) {
             this.loading = false
           }
         }
       })
-    }
-  }
+    },
+  },
 }
 </script>

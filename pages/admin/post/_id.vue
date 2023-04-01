@@ -2,19 +2,19 @@
   <div class="page-wrap">
     <el-breadcrumb separator="/" class="mb">
       <el-breadcrumb-item to="/admin/list">Посты</el-breadcrumb-item>
-      <el-breadcrumb-item>{{post.title}}</el-breadcrumb-item>
+      <el-breadcrumb-item>{{ post.title }}</el-breadcrumb-item>
     </el-breadcrumb>
 
     <el-form
+      ref="form"
       :model="controls"
       :rules="rules"
-      ref="form"
       @submit.native.prevent="onSubmit"
     >
       <el-form-item label="Текст в формате .md или .html" prop="text">
         <el-input
-          type="textarea"
           v-model="controls.text"
+          type="textarea"
           resize="none"
           :rows="10"
         />
@@ -35,12 +35,7 @@
       </div>
 
       <el-form-item>
-        <el-button
-          type="primary"
-          native-type="submit"
-          round
-          :loading="loading"
-        >
+        <el-button type="primary" native-type="submit" round :loading="loading">
           Обновить
         </el-button>
       </el-form-item>
@@ -52,40 +47,48 @@
 export default {
   layout: 'admin',
   middleware: ['admin-auth'],
-  head() {
-    return {
-      title: `Пост | ${this.post.title}`
-    }
-  },
-  validate({params}) {
+
+  validate({ params }) {
     return Boolean(params.id)
   },
-  async asyncData({store, params}) {
+  async asyncData({ store, params }) {
     const post = await store.dispatch('post/fetchAdminById', params.id)
-    return {post}
+    return { post }
   },
   data() {
     return {
       loading: false,
       controls: {
-        text: ''
+        text: '',
       },
       rules: {
         text: [
-          { required: true, message: 'Текст не должен быть пустым', trigger: 'blur' }
-        ]
-      }
+          {
+            required: true,
+            message: 'Текст не должен быть пустым',
+            trigger: 'blur',
+          },
+        ],
+      },
     }
+  },
+  head() {
+    return {
+      title: `Пост | ${this.post.title}`,
+    }
+  },
+  mounted() {
+    this.controls.text = this.post.text
   },
   methods: {
     onSubmit() {
-      this.$refs.form.validate(async valid => {
+      this.$refs.form.validate(async (valid) => {
         if (valid) {
           this.loading = true
 
           const formData = {
             text: this.controls.text,
-            id: this.post._id
+            id: this.post._id,
           }
 
           try {
@@ -97,17 +100,17 @@ export default {
           }
         }
       })
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-  .page-wrap {
-    width: 600px;
-  }
+.page-wrap {
+  width: 600px;
+}
 
-  .mr {
-    margin-right: 2rem;
-  }
+.mr {
+  margin-right: 2rem;
+}
 </style>

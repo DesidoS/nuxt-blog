@@ -17,13 +17,14 @@ module.exports = {
 
   css: ['element-ui/lib/theme-chalk/index.css', '@/theme/index.scss'],
 
-  plugins: ['@/plugins/globals'],
+  plugins: ['@/plugins/globals', '@/plugins/axios'],
 
   components: true,
 
   buildModules: ['@nuxtjs/eslint-module'],
 
   modules: ['@nuxtjs/axios'],
+  axios: {},
 
   build: {
     transpile: [/^element-ui/],

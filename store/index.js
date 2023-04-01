@@ -1,6 +1,12 @@
 export const state = () => ({
-  error: null
+  error: null,
 })
+
+export const actions = {
+  nuxtServerInit({ dispatch }) {
+    dispatch('auth/autoLogin')
+  },
+}
 
 export const mutations = {
   setError(state, error) {
@@ -8,9 +14,9 @@ export const mutations = {
   },
   clearError(state) {
     state.error = null
-  }
+  },
 }
 
 export const getters = {
-  error: state => state.error
+  error: (state) => state.error,
 }
