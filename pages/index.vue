@@ -17,7 +17,7 @@ export default {
     return { posts }
   },
   head: {
-    title: 'Главная',
+    title: `Главная | ${process.env.appName}`,
   },
 }
 </script>

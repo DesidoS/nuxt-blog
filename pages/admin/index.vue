@@ -25,5 +25,8 @@ export default {
     const { views, comments } = await store.dispatch('post/getAnalytics')
     return { views, comments }
   },
+  head: {
+    title: `Аналитика | ${process.env.appName}`,
+  },
 }
 </script>

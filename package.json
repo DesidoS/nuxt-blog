@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.3.5",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
+    "chart.js": "^2.7.3",
     "cookie": "^0.3.1",
     "core-js": "^3.25.3",
     "cross-env": "^5.2.0",
@@ -33,7 +35,6 @@
     "passport-jwt": "^4.0.1",
     "serve-static": "^1.15.0",
     "vue": "^2.7.10",
-    "chart.js": "^2.7.3",
     "vue-chartjs": "^3.5.1",
     "vue-markdown": "^2.2.4",
     "vue-server-renderer": "^2.7.10",

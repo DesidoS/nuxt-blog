@@ -84,6 +84,9 @@ export default {
       },
     }
   },
+  head: {
+    title: `Новый пост | ${process.env.appName}`,
+  },
   methods: {
     handleImageChange(file, fileList) {
       this.image = file.raw

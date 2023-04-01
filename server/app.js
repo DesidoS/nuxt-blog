@@ -9,10 +9,8 @@ const commentRoutes = require('./routes/comment.routes')
 const keys = require('./keys')
 const app = express()
 
-mongoose.set('useUnifiedTopology', true)
-
 mongoose
-  .connect(keys.MONGO_URI)
+  .connect(keys.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => console.log('MongoDB connected...'))
   .catch((error) => console.error(error))
 

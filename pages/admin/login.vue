@@ -50,6 +50,9 @@ export default {
       },
     }
   },
+  head: {
+    title: `Вход в панель администратора | ${process.env.appName}`,
+  },
   mounted() {
     const { message } = this.$route.query
 

@@ -49,6 +49,9 @@ export default {
       },
     }
   },
+  head: {
+    title: `Создать пользователя | ${process.env.appName}`,
+  },
   methods: {
     onSubmit() {
       this.$refs.form.validate(async (valid) => {

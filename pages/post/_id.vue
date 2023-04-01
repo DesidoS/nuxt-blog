@@ -10,7 +10,7 @@
       <div class="post-info">
         <small>
           <i class="el-icon-time"></i>
-          {{ new Date(post.date).toLocaleString() }}
+          {{ post.date | date }}
         </small>
         <small>
           <i class="el-icon-view"></i>
@@ -62,6 +62,11 @@ export default {
   data() {
     return {
       canAddComment: true,
+    }
+  },
+  head() {
+    return {
+      title: `${this.post.title} | ${process.env.appName}`,
     }
   },
   methods: {

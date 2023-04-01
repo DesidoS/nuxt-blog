@@ -29,10 +29,15 @@ module.exports = {
   ],
 
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
 
   axios: {},
+
+  env: {
+    appName: 'SSR Blog'
+  },
 
   build: {
     transpile: [/^element-ui/],
