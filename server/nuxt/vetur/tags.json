@@ -1,0 +1,20 @@
+{
+  "AdminAnalyticsChart": {
+    "description": "Auto imported from components/admin/AnalyticsChart.vue"
+  },
+  "AdminAppAside": {
+    "description": "Auto imported from components/admin/AppAside.vue"
+  },
+  "MainAppNavigation": {
+    "description": "Auto imported from components/main/App-Navigation.vue"
+  },
+  "MainAppComment": {
+    "description": "Auto imported from components/main/AppComment.vue"
+  },
+  "MainAppPost": {
+    "description": "Auto imported from components/main/AppPost.vue"
+  },
+  "MainCommentForm": {
+    "description": "Auto imported from components/main/CommentForm.vue"
+  }
+}

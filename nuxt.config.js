@@ -20,6 +20,7 @@ module.exports = {
   plugins: ['@/plugins/globals', '@/plugins/axios'],
 
   components: true,
+  buildDir: 'server/nuxt',
 
   buildModules: ['@nuxtjs/eslint-module'],
 
