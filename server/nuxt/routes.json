@@ -3,54 +3,63 @@
     "name": "admin",
     "path": "/admin",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/admin/index.vue",
-    "chunkName": "pages/admin/index"
+    "chunkName": "pages/admin/index",
+    "_name": "_d309803a"
   },
   {
     "name": "admin-create",
     "path": "/admin/create",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/admin/create.vue",
-    "chunkName": "pages/admin/create"
+    "chunkName": "pages/admin/create",
+    "_name": "_60a1073b"
   },
   {
     "name": "admin-list",
     "path": "/admin/list",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/admin/list.vue",
-    "chunkName": "pages/admin/list"
+    "chunkName": "pages/admin/list",
+    "_name": "_3a2098c6"
   },
   {
     "name": "admin-login",
     "path": "/admin/login",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/admin/login.vue",
-    "chunkName": "pages/admin/login"
+    "chunkName": "pages/admin/login",
+    "_name": "_6022e2fa"
   },
   {
     "name": "admin-logout",
     "path": "/admin/logout",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/admin/logout.vue",
-    "chunkName": "pages/admin/logout"
+    "chunkName": "pages/admin/logout",
+    "_name": "_1d6af66e"
   },
   {
     "name": "admin-user",
     "path": "/admin/user",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/admin/user.vue",
-    "chunkName": "pages/admin/user"
+    "chunkName": "pages/admin/user",
+    "_name": "_fa4edf6c"
   },
   {
     "name": "admin-post-id",
     "path": "/admin/post/:id?",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/admin/post/_id.vue",
-    "chunkName": "pages/admin/post/_id"
+    "chunkName": "pages/admin/post/_id",
+    "_name": "_35349e6c"
   },
   {
     "name": "post-id",
     "path": "/post/:id?",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/post/_id.vue",
-    "chunkName": "pages/post/_id"
+    "chunkName": "pages/post/_id",
+    "_name": "_5be2134a"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/desidos/VS-CODE/nuxt js/nuxt-blog/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_78c4253a"
   }
 ]
