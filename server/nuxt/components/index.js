@@ -1,9 +1,9 @@
-export { default as AdminAnalyticsChart } from '../../../components/admin/AnalyticsChart.vue'
-export { default as AdminAppAside } from '../../../components/admin/AppAside.vue'
-export { default as MainAppNavigation } from '../../../components/main/App-Navigation.vue'
-export { default as MainAppComment } from '../../../components/main/AppComment.vue'
-export { default as MainAppPost } from '../../../components/main/AppPost.vue'
-export { default as MainCommentForm } from '../../../components/main/CommentForm.vue'
+export const AdminAnalyticsChart = () => import('../../../components/admin/AnalyticsChart.vue' /* webpackChunkName: "components/admin-analytics-chart" */).then(c => wrapFunctional(c.default || c))
+export const AdminAppAside = () => import('../../../components/admin/AppAside.vue' /* webpackChunkName: "components/admin-app-aside" */).then(c => wrapFunctional(c.default || c))
+export const MainAppNavigation = () => import('../../../components/main/App-Navigation.vue' /* webpackChunkName: "components/main-app-navigation" */).then(c => wrapFunctional(c.default || c))
+export const MainAppComment = () => import('../../../components/main/AppComment.vue' /* webpackChunkName: "components/main-app-comment" */).then(c => wrapFunctional(c.default || c))
+export const MainAppPost = () => import('../../../components/main/AppPost.vue' /* webpackChunkName: "components/main-app-post" */).then(c => wrapFunctional(c.default || c))
+export const MainCommentForm = () => import('../../../components/main/CommentForm.vue' /* webpackChunkName: "components/main-comment-form" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
