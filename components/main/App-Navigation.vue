@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <h1>SSR Blog</h1>
+    <h1>Блог новинок The Burger</h1>
   </nav>
 </template>
 
