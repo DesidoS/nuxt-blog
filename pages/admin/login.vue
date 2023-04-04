@@ -6,9 +6,9 @@
       :rules="rules"
       @submit.native.prevent="onSubmit"
     >
-      <h2>Войти в панель администратора</h2>
+      <h2>Login to admin panel</h2>
 
-      <el-form-item label="Логин" prop="login">
+      <el-form-item label="Login" prop="login">
         <el-input v-model.trim="controls.login" />
       </el-form-item>
 
@@ -20,7 +20,7 @@
 
       <el-form-item>
         <el-button type="primary" native-type="submit" round :loading="loading">
-          Войти
+          Enter
         </el-button>
       </el-form-item>
     </el-form>
@@ -38,12 +38,12 @@ export default {
         password: '',
       },
       rules: {
-        login: [{ required: true, message: 'Введите логин', trigger: 'blur' }],
+        login: [{ required: true, message: 'Enter login', trigger: 'blur' }],
         password: [
-          { required: true, message: 'Введите пароль', trigger: 'blur' },
+          { required: true, message: 'Enter password', trigger: 'blur' },
           {
             min: 6,
-            message: 'Пароль должен быть не менее 6 символов',
+            message: 'Password must be at least 6 characters',
             trigger: 'blur',
           },
         ],
@@ -51,20 +51,20 @@ export default {
     }
   },
   head: {
-    title: `Вход в панель администратора | ${process.env.appName}`,
+    title: `Admin panel login | ${process.env.appName}`,
   },
   mounted() {
     const { message } = this.$route.query
 
     switch (message) {
       case 'login':
-        this.$message.info('Для начала войдите в систему')
+        this.$message.info('Login to get started')
         break
       case 'logout':
-        this.$message.success('Вы успешно вышли из системы')
+        this.$message.success('You have successfully logged out')
         break
       case 'session':
-        this.$message.warning('Время сессии истекло, пожалуйста зайдите заного')
+        this.$message.warning('Session has expired, please check back')
         break
     }
   },

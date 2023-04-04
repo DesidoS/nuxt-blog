@@ -1,8 +1,8 @@
 <template>
   <div class="error-layout">
     <div class="error-content">
-      <h1 class="error-title">Ошибка 404</h1>
-      <nuxt-link to="/">Вернуться на главную</nuxt-link>
+      <h1 class="error-title">Error 404</h1>
+      <nuxt-link to="/">Go back to the main page</nuxt-link>
     </div>
   </div>
 </template>

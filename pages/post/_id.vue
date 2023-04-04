@@ -38,7 +38,7 @@
           :comment="comment"
         />
       </div>
-      <div v-else class="text-center">Комментариев нет</div>
+      <div v-else class="text-center">Тo comments</div>
     </footer>
   </article>
 </template>

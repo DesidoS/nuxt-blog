@@ -12,7 +12,7 @@
       <img :src="post.imageUrl" alt="post image" class="post-img" />
     </div>
     <footer class="post-footer">
-      <el-button round @click="openPost">Открыть</el-button>
+      <el-button round @click="openPost">Open</el-button>
 
       <span>
         <i class="el-icon-message"></i>

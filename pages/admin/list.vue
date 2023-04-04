@@ -1,27 +1,27 @@
 <template>
   <el-table :data="posts" style="width: 100%">
-    <el-table-column prop="title" label="Название" />
-    <el-table-column label="Дата">
+    <el-table-column prop="title" label="Name" />
+    <el-table-column label="Date">
       <template slot-scope="{ row: { date } }">
         <i class="el-icon-time"></i>
         <span style="margin-left: 10px">{{ date | date('date') }}</span>
       </template>
     </el-table-column>
-    <el-table-column label="Просмотры">
+    <el-table-column label="Views">
       <template slot-scope="{ row: { views } }">
         <i class="el-icon-view"></i>
         <span style="margin-left: 10px">{{ views }}</span>
       </template>
     </el-table-column>
-    <el-table-column label="Комментарии">
+    <el-table-column label="Comments">
       <template slot-scope="{ row: { comments } }">
         <i class="el-icon-message"></i>
         <span style="margin-left: 10px">{{ comments.length }}</span>
       </template>
     </el-table-column>
-    <el-table-column label="Действия">
+    <el-table-column label="Actions">
       <template slot-scope="{ row }">
-        <el-tooltip effect="dark" content="Открыть пост" placement="top">
+        <el-tooltip effect="dark" content="Open post" placement="top">
           <el-button
             icon="el-icon-edit"
             type="primary"
@@ -29,7 +29,7 @@
             @click="open(row._id)"
           />
         </el-tooltip>
-        <el-tooltip effect="dark" content="Удалить пост" placement="top">
+        <el-tooltip effect="dark" content="Delete post" placement="top">
           <el-button
             icon="el-icon-delete"
             type="danger"
@@ -59,15 +59,15 @@ export default {
     },
     async remove(id) {
       try {
-        await this.$confirm('Удалить пост?', 'Внимание!', {
-          confirmButtonText: 'Да',
-          cancelButtonText: 'Отменить',
+        await this.$confirm('Delete post?', 'Attention!', {
+          confirmButtonText: 'Yes',
+          cancelButtonText: 'Cancel',
           type: 'warning',
         })
         await this.$store.dispatch('post/remove', id)
         this.posts = this.posts.filter((p) => p._id !== id)
 
-        this.$message.success('Пост удален')
+        this.$message.success('Post deleted')
       } catch (e) {}
     },
   },

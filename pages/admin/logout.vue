@@ -1,5 +1,5 @@
 <template>
-  <div>Очищаем данные</div>
+  <div>Cleaning up the data</div>
 </template>
 
 <script>

@@ -5,21 +5,21 @@
     :rules="rules"
     @submit.native.prevent="onSubmit"
   >
-    <h2>Создать пользователя</h2>
+    <h2>Create user</h2>
 
-    <el-form-item label="Логин" prop="login">
+    <el-form-item label="Login" prop="login">
       <el-input v-model.trim="controls.login" />
     </el-form-item>
 
     <div class="mb2">
-      <el-form-item label="Пароль" prop="password">
+      <el-form-item label="Password" prop="password">
         <el-input v-model.trim="controls.password" type="password" />
       </el-form-item>
     </div>
 
     <el-form-item>
       <el-button type="primary" native-type="submit" round :loading="loading">
-        Создать
+        Create
       </el-button>
     </el-form-item>
   </el-form>
@@ -37,12 +37,12 @@ export default {
         password: '',
       },
       rules: {
-        login: [{ required: true, message: 'Введите логин', trigger: 'blur' }],
+        login: [{ required: true, message: 'Enter login', trigger: 'blur' }],
         password: [
-          { required: true, message: 'Введите пароль', trigger: 'blur' },
+          { required: true, message: 'Enter password', trigger: 'blur' },
           {
             min: 6,
-            message: 'Пароль должен быть не менее 6 символов',
+            message: 'Password must be at least 6 characters',
             trigger: 'blur',
           },
         ],
@@ -50,7 +50,7 @@ export default {
     }
   },
   head: {
-    title: `Создать пользователя | ${process.env.appName}`,
+    title: `Create user | ${process.env.appName}`,
   },
   methods: {
     onSubmit() {
@@ -65,7 +65,7 @@ export default {
             }
 
             await this.$store.dispatch('auth/createUser', formData)
-            this.$message.success('Новый пользователь добавлен')
+            this.$message.success('New user added')
             this.controls.login = ''
             this.controls.password = ''
             this.loading = false

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h1>Аналитика по постам</h1>
+    <h1>Post analytics</h1>
     <app-analytics-chart
-      title="Количество просмотров"
+      title="Views"
       :labels="views.labels"
       :data="views.data"
     />
 
     <app-analytics-chart
-      title="Количество комментариев"
+      title="Comments"
       :labels="comments.labels"
       :data="comments.data"
     />
@@ -26,7 +26,7 @@ export default {
     return { views, comments }
   },
   head: {
-    title: `Аналитика | ${process.env.appName}`,
+    title: `Analytics | ${process.env.appName}`,
   },
 }
 </script>

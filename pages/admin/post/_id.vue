@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrap">
     <el-breadcrumb separator="/" class="mb">
-      <el-breadcrumb-item to="/admin/list">Посты</el-breadcrumb-item>
+      <el-breadcrumb-item to="/admin/list">Posts</el-breadcrumb-item>
       <el-breadcrumb-item>{{ post.title }}</el-breadcrumb-item>
     </el-breadcrumb>
 

@@ -5,13 +5,13 @@
     :rules="rules"
     @submit.native.prevent="onSubmit"
   >
-    <h1>Добавить комментарий</h1>
+    <h1>Add a comment</h1>
 
-    <el-form-item label="Ваше имя" prop="name">
+    <el-form-item label="Your name" prop="name">
       <el-input v-model="controls.name" />
     </el-form-item>
 
-    <el-form-item label="Текст комментария" prop="text">
+    <el-form-item label="Comment text" prop="text">
       <el-input
         v-model="controls.text"
         type="textarea"
@@ -22,7 +22,7 @@
 
     <el-form-item>
       <el-button type="primary" native-type="submit" round :loading="loading">
-        Добавить комментарий
+        Add a comment
       </el-button>
     </el-form-item>
   </el-form>
